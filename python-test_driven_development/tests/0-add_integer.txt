@@ -25,13 +25,15 @@
 98
 
 # Test invalid input (string)
->>> add_integer(4, "School")
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
+>>> try:
+...     add_integer(4, "School")
+... except TypeError as e:
+...     str(e)
+'b must be an integer'
 
 # Test invalid input (None)
->>> add_integer(None)
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
+>>> try:
+...     add_integer(None)
+... except TypeError as e:
+...     str(e)
+'b must be an integer'
