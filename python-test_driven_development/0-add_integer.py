@@ -44,4 +44,3 @@ def add_integer(a, b=98):
         print(add_integer(None))  # Raises a TypeError
     except Exception as e:
         print(e)  # Output: "a must be an integer or b must be an integer"
-./
