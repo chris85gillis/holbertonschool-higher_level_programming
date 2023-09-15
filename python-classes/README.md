@@ -34,4 +34,8 @@ The length of your files will be tested using wc
 All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
 All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
 All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
+<<<<<<< HEAD
 A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+=======
+A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+>>>>>>> 0951c11d6e717a7c7021d23990f6f0227ae1c4d0
