@@ -28,3 +28,19 @@ def add_integer(a, b=98):
     b = int(b)
 
     return a + b
+
+add_integer = __import__('0-add_integer').add_integer
+
+print(add_integer(1, 2))       # Output: 3
+print(add_integer(100, -2))    # Output: 98
+print(add_integer(2))          # Output: 100 (default value of b is 98)
+print(add_integer(100.3, -2))  # Output: 98
+try:
+    print(add_integer(4, "School"))  # Raises a TypeError
+except Exception as e:
+    print(e)  # Output: "a must be an integer or b must be an integer"
+
+try:
+    print(add_integer(None))  # Raises a TypeError
+except Exception as e:
+    print(e)  # Output: "a must be an integer or b must be an integer"
