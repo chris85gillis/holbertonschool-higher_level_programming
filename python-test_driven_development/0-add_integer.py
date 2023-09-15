@@ -1,5 +1,13 @@
 #!/usr/bin/python3
+"""Demonstrates the usage of the add_integer function."""
+
+
 add_integer= __import__('0-add_integer').add_integer
+"""Addes two integers and returns their sum.
+    Args:
+        a (int): The first integer to be added.
+        b (int): The second integer to be added.
+"""
 
 print(add_integer(1, 2))
 print(add_integer(100, -2))
