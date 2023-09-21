@@ -1,0 +1,13 @@
+#!/bin/bash
+
+printf "Enter file name: "
+read M
+
+if [ -z "$M" ]; then
+	    echo "Error: File name cannot be empty."
+	        exit 1
+fi
+
+echo "#!/usr/bin/python3" > "$M"
+chmod u+x "$M"
+vi "$M"
