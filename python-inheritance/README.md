@@ -4,7 +4,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 
 General
 
-**What is a superclass, baseclass or parentclass**
+#**What is a superclass, baseclass or parentclass**
 
 	In Python, a superclass, base class, or parent class is a class that serves as the blueprint for one or more derived classes (also known as subclasses or child classes). A superclass defines common attributes and behaviors that are shared by its subclasses, allowing you to create a hierarchy of classes with specialized functionality. 
 
