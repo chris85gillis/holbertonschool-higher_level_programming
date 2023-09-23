@@ -38,7 +38,7 @@ General
 	Superclasses are used to promote code reusability, maintainability, and to create a logical hierarchy of classes in object-oriented programming.
 
 
-**What is a subclass**
+# What is a subclass
 
 	In object-oriented programming, a subclass, also known as a derived class or child class, is a class that inherits properties and behaviors (attributes and methods) from another class called the superclass or base class or parent class. Subclasses are created to extend or specialize the functionality of the superclass. This is a fundamental concept in inheritance, which is one of the four fundamental principles of object-oriented programming (OOP), along with encapsulation, abstraction, and polymorphism.
 
@@ -83,7 +83,7 @@ General
 	Subclasses allow you to create a more organized and modular code structure by modeling real-world relationships and hierarchies in your software.
 
 
-**How to list all attributes and methods of a class or instance**
+# How to list all attributes and methods of a class or instance
 
 In Python, you can list all attributes and methods of a class or an instance using the following techniques:
 
@@ -150,7 +150,7 @@ In Python, you can list all attributes and methods of a class or an instance usi
 	Please note that in all of these methods, you may see some built-in methods and attributes, as well as those that are part of the class's internal implementation. To get a cleaner list of user-defined attributes and methods, you may want to filter the results based on your specific criteria.
 
 
-**When can an instance have new attributes**
+# When can an instance have new attributes
 
 	In Python, instances of a class can have new attributes added to them at any time during their lifetime. This flexibility is one of the dynamic features of Python. Here are some common scenarios in which you might add new attributes to an instance:
 
@@ -195,7 +195,7 @@ It's important to note that when you add new attributes to an instance, those at
 Adding attributes dynamically can be convenient, but it's essential to ensure that your code remains organized and well-documented to prevent unexpected behavior and maintainability issues.
 
 
-**How to inherit class from another**
+# How to inherit class from another
 
 	In Python, you can create a subclass (also known as a derived class or child class) by inheriting from another class (known as a superclass or base class or parent class). Inheritance allows the subclass to inherit the attributes and methods of the superclass, and you can further customize or extend the subclass as needed.
 
@@ -263,7 +263,7 @@ Here's a step-by-step explanation of how to create a subclass by inheriting from
 That's the basic process of creating a subclass by inheriting from a superclass in Python. Inheritance allows you to build upon existing classes, promoting code reuse and creating a hierarchy of classes with specialized functionality.
 
 
-**How to define a class with multiple base classes**
+# How to define a class with multiple base classes
 
 	In Python, you can define a class with multiple base classes by using a mechanism called "multiple inheritance." Multiple inheritance allows a class to inherit attributes and methods from more than one base class. To define such a class, you list the names of the base classes within parentheses after the class name.
 
@@ -327,7 +327,7 @@ Here's a step-by-step explanation of how to define a class with multiple base cl
 That's how you define a class with multiple base classes using multiple inheritance in Python. Multiple inheritance can be a powerful feature, but it can also lead to complex class hierarchies, so use it judiciously and consider potential issues like method name conflicts (method overriding) and the method resolution order (MRO) when working with multiple base classes.
 
 
-**What is the default class every class inherit from**
+# What is the default class every class inherit from
 
 	In Python, every class implicitly inherits from a default base class called `object`. The `object` class is the root class for all classes in Python. It provides a set of fundamental methods and attributes that are available to all objects in Python. 
 
@@ -360,7 +360,7 @@ print(isinstance(my_instance, object))  # Output: True
 In Python 2, it was necessary to explicitly inherit from `object` to enable some features associated with new-style classes. However, in Python 3, all classes are considered new-style classes and inherit from `object` by default.
 
 
-**How to override a method or attribute inherited from the base class**
+# How to override a method or attribute inherited from the base class
 
 	In Python, you can override a method or attribute that is inherited from a base class (superclass) in a subclass by providing a new implementation in the subclass. This allows you to customize the behavior of the method or attribute for the specific needs of the subclass. Here's how you can override a method or attribute:
 
@@ -419,7 +419,7 @@ instance.method()
 This way, you can both reuse the base class's behavior and add specific functionality in the subclass.
 
 
-**Which attributes or methods are available by heritage to subclasses**
+# Which attributes or methods are available by heritage to subclasses
 
 	In Python, when you inherit from a base class (superclass) and create a subclass, the subclass inherits all the attributes and methods that are defined in the base class unless they are marked as private (by starting with a double underscore `__`). Here's what is inherited by a subclass:
 
@@ -482,7 +482,7 @@ This way, you can both reuse the base class's behavior and add specific function
 In summary, public and protected attributes and methods in the base class are inherited by the subclass and can be accessed and used directly. However, private attributes and methods are also technically inherited but are name-mangled in a way that discourages direct access from the subclass. They are intended to be treated as private implementation details of the base class and should not be relied upon or overridden in the subclass.
 
 
-**What is the purpose of inheritance**
+# What is the purpose of inheritance
 
 	Inheritance is a fundamental concept in object-oriented programming (OOP) with several important purposes and advantages:
 
@@ -505,7 +505,7 @@ In summary, public and protected attributes and methods in the base class are in
 In summary, the primary purpose of inheritance in OOP is to promote code reuse, modularity, and customization while improving code organization, maintainability, and flexibility. It allows you to model relationships and hierarchies in your code and leverage the principles of polymorphism and encapsulation.
 
 
-**What are, when and how to use isinstance, issubclass, type and super built-in functions**
+# What are, when and how to use isinstance, issubclass, type and super built-in functions
 
 	In Python, the `isinstance()`, `issubclass()`, `type()`, and `super()` built-in functions are used to work with objects and classes in various ways. Here's an overview of each function, when to use them, and how to use them:
 
