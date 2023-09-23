@@ -3,7 +3,9 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 
 
 General
+
 What is a superclass, baseclass or parentclass
+
 	In Python, a superclass, base class, or parent class is a class that serves as the blueprint for one or more derived classes (also known as subclasses or child classes). A superclass defines common attributes and behaviors that are shared by its subclasses, allowing you to create a hierarchy of classes with specialized functionality. 
 
 	Here's a simple example to illustrate the concept:
@@ -37,6 +39,7 @@ What is a superclass, baseclass or parentclass
 
 
 What is a subclass
+
 	In object-oriented programming, a subclass, also known as a derived class or child class, is a class that inherits properties and behaviors (attributes and methods) from another class called the superclass or base class or parent class. Subclasses are created to extend or specialize the functionality of the superclass. This is a fundamental concept in inheritance, which is one of the four fundamental principles of object-oriented programming (OOP), along with encapsulation, abstraction, and polymorphism.
 
 	Here are some key points about subclasses:
@@ -81,7 +84,8 @@ What is a subclass
 
 
 How to list all attributes and methods of a class or instance
-	In Python, you can list all attributes and methods of a class or an instance using the following techniques:
+
+In Python, you can list all attributes and methods of a class or an instance using the following techniques:
 
 1. Using the `dir()` Function:
    The `dir()` function is a built-in Python function that returns a list of names in the current local scope. When you pass a class or an instance as an argument to `dir()`, it will return a list of attributes and methods associated with that class or instance.
@@ -141,7 +145,7 @@ How to list all attributes and methods of a class or instance
    print(MyClass.__dict__)
    ```
 
-   This will output a dictionary containing the class's attributes, methods, and other class-related data.
+	This will output a dictionary containing the class's attributes, methods, and other class-related data.
 
 Please note that in all of these methods, you may see some built-in methods and attributes, as well as those that are part of the class's internal implementation. To get a cleaner list of user-defined attributes and methods, you may want to filter the results based on your specific criteria.
 When can an instance have new attributes
