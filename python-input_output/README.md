@@ -151,10 +151,96 @@ Keep in mind that the `seek()` method allows you to move the cursor to any posit
 
 ## How to make sure a file is closed after using it
 
+To ensure that a file is closed after reading it in Python, you can use the `with` statement. The `with` statement automatically closes the file when the block of code inside it is exited. Here's how you can do it:
 
-What is and how to use the with statement
-What is JSON
-What is serialization
+```python
+# Syntax: open(filename, mode, encoding)
+# - filename: The name of the file you want to open for reading.
+# - mode: 'r' for reading.
+# - encoding (optional): The character encoding to use when reading the file (e.g., 'utf-8').
+
+# Example: Reading a file using a with statement
+file_name = "example.txt"
+try:
+    with open(file_name, 'r', encoding='utf-8') as file:
+        for line in file:
+            print(line, end='')  # Print each line without an extra newline
+except FileNotFoundError:
+    print(f"The file '{file_name}' does not exist.")
+except Exception as e:
+    print(f"An error occurred: {e}")
+```
+
+In this example:
+
+- We open the file "example.txt" in read mode (`'r'`) using the `open()` function within a `with` statement.
+- Inside the `with` block, we read the file line by line and print each line.
+- After the `with` block is exited (either successfully or due to an exception), the file will be automatically closed. You don't need to explicitly call `file.close()`.
+
+Using the `with` statement is a best practice because it ensures that the file is closed properly, even if an exception occurs during file reading.
+
+
+## What is and how to use the with statement
+
+with context_manager_expression as variable:
+    # Code block
+    # The context manager sets up and manages the resource associated with 'variable'
+    # Operations inside the block can use 'variable'
+
+	# After the block, the context manager performs cleanup or finalization
+	# The resource associated with 'variable' is properly closed or released
+
+
+## What is JSON
+
+JSON (JavaScript Object Notation) is a lightweight data interchange format in Python and many other programming languages. It is often used to represent structured data in a human-readable text format. JSON is easy for both humans to read and write and for machines to parse and generate. In Python, JSON data can be represented as dictionaries and lists, which are common data structures in the language.
+
+Here are some key points about JSON in Python:
+
+1. **Syntax**: JSON uses a simple and consistent syntax with key-value pairs, where keys are strings enclosed in double quotes, and values can be strings, numbers, booleans, arrays (lists), or other JSON objects (dictionaries).
+
+2. **Example JSON Data**:
+
+    ```json
+    {
+        "name": "John Doe",
+        "age": 30,
+        "is_student": false,
+        "languages": ["Python", "JavaScript", "C++"],
+        "address": {
+            "street": "123 Main St",
+            "city": "Anytown",
+            "zipcode": "12345"
+        }
+    }
+    ```
+
+3. **Representing JSON in Python**: In Python, JSON data can be represented as dictionaries, lists, strings, numbers, booleans, and None (for null values). The `json` module in Python provides functions for working with JSON data, such as `json.loads()` for parsing JSON from a string, and `json.dumps()` for encoding Python data as JSON.
+
+   ```python
+   import json
+
+   # Parsing JSON from a string
+   json_data = '{"name": "John", "age": 30}'
+   data = json.loads(json_data)
+   print(data)  # Output: {'name': 'John', 'age': 30}
+
+   # Encoding Python data as JSON
+   python_dict = {"name": "Alice", "age": 25}
+   json_str = json.dumps(python_dict)
+   print(json_str)  # Output: '{"name": "Alice", "age": 25}'
+   ```
+
+4. **Use Cases**: JSON is commonly used for data exchange between a server and a client in web applications, configuration files, and as a general data serialization format. It is widely used in RESTful web services and APIs for data communication.
+
+5. **JSON vs. Python Dictionaries**: JSON objects closely resemble Python dictionaries, and in many cases, you can convert between the two using the `json` module. However, JSON has some restrictions that Python dictionaries do not, such as requiring keys to be strings and not allowing tuples as keys.
+
+Overall, JSON is a versatile and widely adopted data format for representing structured data in Python and other programming languages, making it easy to share and work with data between different systems.
+
+
+## What is serialization
+
+
 What is deserialization
 How to convert a Python data structure to a JSON string
 How to convert a JSON string to a Python data structure
