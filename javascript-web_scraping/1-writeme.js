@@ -1,7 +1,3 @@
 #!/usr/bin/node
-const request = require('request');
-request(process.argv[2], function (error, response) {
-  if (error == null) {
-    console.log('code: ' + response.statusCode);
-  }
-});
+const fs = require('fs');
+fs.writeFileSync(process.argv[2], process.argv[3]);
