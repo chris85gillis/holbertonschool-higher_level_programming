@@ -1,4 +1,5 @@
-const $ = window.$;
-$('DIV#red_header').click(function () {
-  $('HEADER').addClass('red');
+$(function () {
+  $('#red_header').click(function () {
+    $('header').addClass('red');
+  });
 });
